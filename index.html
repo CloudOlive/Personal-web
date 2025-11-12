@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for proper rendering and SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Olive Nwafor - Product Manager">
+    <title>Olive Nwafor - Product Manager</title>
+    
+    <!-- Google Fonts: Inter for a modern, clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           CSS STYLES - All design rules are here
+           ============================================ */
+        
+        /* Reset default browser styles for consistency */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Root variables for easy color/typography management */
+        :root {
+            --bg-color: #FFE5E5;           /* Baby pink background */
+            --text-color: #1a1a1a;         /* Near-black text */
+            --text-light: #666666;         /* Lighter gray for secondary text */
+            --accent-color: #2563eb;       /* Blue accent for links */
+            --accent-hover: #1d4ed8;       /* Darker blue on hover */
+            --border-color: #e5e5e5;       /* Subtle borders */
+            --max-width: 800px;            /* Maximum content width */
+            --spacing-mobile: 20px;        /* Mobile side padding */
+            --spacing-desktop: 100px;      /* Desktop section spacing */
+        }
+        
+        /* Base body styles */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+                        'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;              /* Comfortable reading line height */
+            font-size: 18px;               /* Readable base font size */
+            -webkit-font-smoothing: antialiased;  /* Smooth text on Mac */
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Main container - centers content and sets max width */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-mobile);
+        }
+        
+        /* ============================================
+           HEADER SECTION
+           ============================================ */
+        
+        header {
+            padding: 120px 0 80px;         /* Top padding for breathing room */
+            text-align: center;
+            animation: fadeIn 1s ease-in;  /* Fade-in animation on load */
+        }
+        
+        /* Main name heading - large and bold */
+        h1 {
+            font-size: 56px;               /* Large size for impact */
+            font-weight: 700;              /* Bold weight */
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;       /* Tighter letter spacing for modern look */
+            color: var(--text-color);
+        }
+        
+        /* Job title/tagline - smaller and subtle */
+        .tagline {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-top: 8px;
+        }
+        
+        /* ============================================
+           MAIN CONTENT SECTIONS
+           ============================================ */
+        
+        main {
+            padding-bottom: var(--spacing-desktop);
+        }
+        
+        /* Each section has consistent spacing */
+        section {
+            margin-bottom: 80px;
+            animation: fadeInUp 0.8s ease-out;
+            animation-fill-mode: both;     /* Keeps final state after animation */
+        }
+        
+        /* Stagger animations for each section */
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.3s; }
+        section:nth-child(4) { animation-delay: 0.4s; }
+        section:nth-child(5) { animation-delay: 0.5s; }
+        section:nth-child(6) { animation-delay: 0.6s; }
+        
+        /* Section headings */
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--text-color);
+            letter-spacing: -0.01em;
+        }
+        
+        /* Paragraph text styling */
+        p {
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+        
+        /* ============================================
+           WORK/EXPERIENCE SECTION
+           ============================================ */
+        
+        .experience-item {
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;           /* No border on last item */
+        }
+        
+        .job-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--text-color);
+        }
+        
+        .company {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+        
+        /* ============================================
+           PROJECTS SECTION
+           ============================================ */
+        
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;                     /* Space between project cards */
+        }
+        
+        .project-card {
+            padding: 24px;
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;     /* Smooth hover transition */
+        }
+        
+        .project-card:hover {
+            transform: translateY(-2px);   /* Slight lift on hover */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-color: var(--accent-color);
+        }
+        
+        .project-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+        
+        .project-description {
+            color: var(--text-light);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        /* ============================================
+           LINKS STYLING
+           ============================================ */
+        
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid transparent;  /* Invisible border for smooth hover */
+        }
+        
+        a:hover {
+            color: var(--accent-hover);
+            border-bottom-color: var(--accent-hover);  /* Underline on hover */
+        }
+        
+        /* ============================================
+           WRITING SECTION - Bulleted List
+           ============================================ */
+        
+        .writing-list {
+            list-style-type: disc;          /* Standard bullet points */
+            padding-left: 24px;             /* Indentation for bullets */
+            margin-bottom: 16px;
+        }
+        
+        .writing-list li {
+            margin-bottom: 12px;            /* Space between list items */
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+        
+        .writing-list li:last-child {
+            margin-bottom: 0;                /* No margin on last item */
+        }
+        
+        /* ============================================
+           FOOTER SECTION
+           ============================================ */
+        
+        footer {
+            text-align: center;
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 80px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;               /* Wrap on mobile */
+        }
+        
+        .social-links a {
+            font-size: 16px;
+            color: var(--text-light);
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+        
+        .footer-text {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 16px;
+        }
+        
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        
+        /* Fade-in animation for header */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Fade-in and slide-up animation for sections */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ============================================
+           RESPONSIVE DESIGN - Mobile & Tablet
+           ============================================ */
+        
+        /* Tablet styles (768px and below) */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 42px;           /* Slightly smaller on tablet */
+            }
+            
+            .tagline {
+                font-size: 18px;
+            }
+            
+            section {
+                margin-bottom: 60px;       /* Less spacing on smaller screens */
+            }
+            
+            .container {
+                padding: 0 30px;           /* More side padding on tablet */
+            }
+        }
+        
+        /* Mobile styles (480px and below) */
+        @media (max-width: 480px) {
+            header {
+                padding: 80px 0 60px;      /* Less padding on mobile */
+            }
+            
+            h1 {
+                font-size: 36px;           /* Smaller heading on mobile */
+            }
+            
+            .tagline {
+                font-size: 16px;
+            }
+            
+            h2 {
+                font-size: 24px;           /* Smaller section headings */
+            }
+            
+            body {
+                font-size: 16px;           /* Slightly smaller body text */
+            }
+            
+            .container {
+                padding: 0 var(--spacing-mobile);
+            }
+            
+            .project-card {
+                padding: 20px;             /* Less padding in cards */
+            }
+            
+            .social-links {
+                gap: 16px;                 /* Tighter spacing for social links */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ============================================
+         HEADER SECTION - Your name and tagline
+         ============================================ -->
+    <header>
+        <div class="container">
+            <!-- Main heading: Your name (largest text on page) -->
+            <h1>Olive Nwafor</h1>
+            
+            <!-- Job title or tagline (appears below name) -->
+            <p class="tagline">Product Manager</p>
+        </div>
+    </header>
+    
+    <!-- ============================================
+         MAIN CONTENT - All sections go here
+         ============================================ -->
+    <main>
+        <div class="container">
+            <!-- ============================================
+                 ABOUT/BIO SECTION
+                 ============================================ -->
+            <section id="about">
+                <!-- Section heading -->
+                <h2>About</h2>
+                
+                <!-- Your professional bio (2-3 sentences) -->
+                <p>
+                    Olive Nwafor is a Product Manager with a passion for building products that help people live better lives.
+                </p>
+            </section>
+            
+            <!-- ============================================
+                 WORK/EXPERIENCE SECTION
+                 ============================================ -->
+            <section id="work">
+                <h2>Work</h2>
+                
+                <!-- Current role -->
+                <div class="experience-item">
+                    <div class="job-title">Product Manager</div>
+                    <div class="company">BlackRock</div>
+                    <p>Brief description of your role or key achievements</p>
+                </div>
+                
+                <!-- Previous role (optional - duplicate this block for more roles) -->
+                <div class="experience-item">
+                    <div class="job-title">Product Manager</div>
+                    <div class="company">Southwire Inc</div>
+                    <p>Brief description</p>
+                </div>
+            </section>
+            
+            <!-- ============================================
+                 PROJECTS/PORTFOLIO SECTION
+                 ============================================ -->
+            <section id="projects">
+                <h2>Projects</h2>
+                
+                <!-- Project list container -->
+                <div class="project-list">
+                    <!-- Project card 1 -->
+                    <div class="project-card">
+                        <div class="project-title">
+                            <a href="#" target="_blank">Project Name 1</a>
+                        </div>
+                        <p class="project-description">
+                            Brief description of the project. What it does, 
+                            technologies used, or key features.
+                        </p>
+                    </div>
+                    
+                    <!-- Project card 2 -->
+                    <div class="project-card">
+                        <div class="project-title">
+                            <a href="#" target="_blank">Project Name 2</a>
+                        </div>
+                        <p class="project-description">
+                            Brief description of the project.
+                        </p>
+                    </div>
+                    
+                    <!-- Project card 3 -->
+                    <div class="project-card">
+                        <div class="project-title">
+                            <a href="#" target="_blank">Project Name 3</a>
+                        </div>
+                        <p class="project-description">
+                            Brief description of the project.
+                        </p>
+                    </div>
+                    
+                    <!-- Add more project cards by copying the above structure -->
+                </div>
+            </section>
+            
+            <!-- ============================================
+                 BLOG/WRITING SECTION (Optional)
+                 ============================================ -->
+            <section id="blog">
+                <h2>Writing</h2>
+                
+                <!-- List of blog posts or articles -->
+                <ul class="writing-list">
+                    <li>
+                        <a href="https://nextwaveintelligence.substack.com/p/nwi-001-understanding-the-moral-and" target="_blank">Understanding the moral and social implications of AGI</a>
+                    </li>
+                    <li>
+                        <a href="https://nextwaveintelligence.substack.com/p/nwi-4-how-companies-can-identify" target="_blank">How companies can identify beneficial AI applications and strategically use gen AI</a>
+                    </li>
+                    <li>
+                        <a href="https://nextwaveintelligence.substack.com/p/nwi-2-talent-and-tech-stack-implications" target="_blank">Talent and tech stack implications of adopting applied AI</a>
+                    </li>
+                </ul>
+                
+                <!-- Or link to your blog platform -->
+                <p style="margin-top: 16px;">
+                    <a href="https://nextwaveintelligence.substack.com/" target="_blank">Read more on Substack →</a>
+                </p>
+            </section>
+            
+            <!-- ============================================
+                 INTERESTS SECTION
+                 ============================================ -->
+            <section id="interests">
+                <h2>Interests</h2>
+                
+                <!-- Your personal interests or hobbies -->
+                <p>
+                    Write about your interests, hobbies, or things you're passionate about. 
+                    Keep it brief and personality-driven. This section helps visitors 
+                    connect with you on a personal level.
+                </p>
+            </section>
+        </div>
+    </main>
+    
+    <!-- ============================================
+         FOOTER SECTION - Social links and contact
+         ============================================ -->
+    <footer>
+        <div class="container">
+            <!-- Social media links -->
+            <div class="social-links">
+                <!-- LinkedIn link -->
+                <a href="https://www.linkedin.com/in/olive-nwafor" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+                
+                <!-- Twitter/X link -->
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    Twitter
+                </a>
+                
+                <!-- GitHub link -->
+                <a href="https://github.com/CloudOlive" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+                
+                <!-- Email link (opens email client) -->
+                <a href="mailto:nwaforolive22@gmail.com">
+                    Email
+                </a>
+                
+                <!-- Add more social links as needed -->
+            </div>
+            
+            <!-- Footer text -->
+            <p class="footer-text">
+                Made with ❤️ in ATL
+            </p>
+            <p class="footer-text" style="margin-top: 8px;">
+                © 2024 Olive Nwafor. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    
+    <!-- ============================================
+         JAVASCRIPT - Minimal interactivity
+         ============================================ -->
+    <script>
+        // Smooth scrolling for anchor links (if you add navigation later)
+        // This makes clicking links scroll smoothly instead of jumping
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();  // Prevent default jump behavior
+                
+                // Get the target section
+                const target = document.querySelector(this.getAttribute('href'));
+                
+                if (target) {
+                    // Smoothly scroll to the target section
+                    target.scrollIntoView({
+                        behavior: 'smooth',  // Smooth animation
+                        block: 'start'       // Align to top of viewport
+                    });
+                }
+            });
+        });
+        
+        // Optional: Add intersection observer for scroll animations
+        // This triggers animations when sections come into view
+        
+        const observerOptions = {
+            threshold: 0.1,  // Trigger when 10% of element is visible
+            rootMargin: '0px 0px -50px 0px'  // Trigger slightly before element enters view
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add a class when section is visible (for future enhancements)
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
