@@ -27,11 +27,12 @@
         /* Root variables for easy color/typography management */
         :root {
             --bg-color: #FFE5E5;           /* Baby pink background */
-            --text-color: #1a1a1a;         /* Near-black text */
-            --text-light: #666666;         /* Lighter gray for secondary text */
-            --accent-color: #2563eb;       /* Blue accent for links */
-            --accent-hover: #1d4ed8;       /* Darker blue on hover */
-            --border-color: #e5e5e5;       /* Subtle borders */
+            --text-color: #253D5B;         /* Dark blue for main text */
+            --text-light: #969696;         /* Medium gray for secondary text */
+            --accent-color: #67697C;       /* Darker gray-blue for links */
+            --accent-hover: #253D5B;       /* Dark blue on hover */
+            --card-bg: #B79D94;            /* Lighter beige-pink for cards */
+            --border-color: #B79D94;       /* Beige-pink borders */
             --max-width: 800px;            /* Maximum content width */
             --spacing-mobile: 20px;        /* Mobile side padding */
             --spacing-desktop: 100px;      /* Desktop section spacing */
@@ -62,7 +63,7 @@
         
         header {
             padding: 120px 0 80px;         /* Top padding for breathing room */
-            text-align: center;
+            text-align: left;              /* Left-aligned header */
             animation: fadeIn 1s ease-in;  /* Fade-in animation on load */
         }
         
@@ -79,7 +80,7 @@
         .tagline {
             font-size: 20px;
             font-weight: 400;
-            color: var(--text-light);
+            color: var(--text-light);  /* Medium gray for subtle appearance */
             margin-top: 8px;
         }
         
@@ -105,6 +106,7 @@
         section:nth-child(4) { animation-delay: 0.4s; }
         section:nth-child(5) { animation-delay: 0.5s; }
         section:nth-child(6) { animation-delay: 0.6s; }
+        section:nth-child(7) { animation-delay: 0.7s; }
         
         /* Section headings */
         h2 {
@@ -113,6 +115,19 @@
             margin-bottom: 24px;
             color: var(--text-color);
             letter-spacing: -0.01em;
+        }
+        
+        /* Subheadings for interests */
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+        
+        h3:first-of-type {
+            margin-top: 0;  /* No top margin for first subheading */
         }
         
         /* Paragraph text styling */
@@ -128,7 +143,7 @@
         .experience-item {
             margin-bottom: 32px;
             padding-bottom: 32px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid rgba(103, 105, 124, 0.3);  /* Subtle gray-blue border */
         }
         
         .experience-item:last-child {
@@ -148,6 +163,19 @@
             margin-bottom: 8px;
         }
         
+        .role-label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--accent-color);
+            margin-left: 8px;
+            padding: 2px 8px;
+            background-color: rgba(103, 105, 124, 0.1);
+            border-radius: 4px;
+        }
+        
         /* ============================================
            PROJECTS SECTION
            ============================================ */
@@ -160,7 +188,7 @@
         
         .project-card {
             padding: 24px;
-            background-color: #ffffff;
+            background-color: var(--card-bg);  /* Beige-pink card background */
             border: 1px solid var(--border-color);
             border-radius: 8px;
             transition: all 0.3s ease;     /* Smooth hover transition */
@@ -168,8 +196,8 @@
         
         .project-card:hover {
             transform: translateY(-2px);   /* Slight lift on hover */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            border-color: var(--accent-color);
+            box-shadow: 0 4px 12px rgba(37, 61, 91, 0.15);  /* Dark blue shadow */
+            border-color: var(--accent-color);  /* Gray-blue border on hover */
         }
         
         .project-title {
@@ -222,13 +250,30 @@
         }
         
         /* ============================================
+           INTERESTS SECTION - Bulleted List
+           ============================================ */
+        
+        .interests-list {
+            list-style-type: disc;          /* Standard bullet points */
+            padding-left: 24px;             /* Indentation for bullets */
+            margin-bottom: 24px;            /* Space after each list */
+            margin-top: 0;                  /* No top margin */
+        }
+        
+        .interests-list li {
+            margin-bottom: 0;               /* No margin between items (single item lists) */
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+        
+        /* ============================================
            FOOTER SECTION
            ============================================ */
         
         footer {
             text-align: center;
             padding: 60px 0 40px;
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid rgba(103, 105, 124, 0.3);  /* Subtle gray-blue border */
             margin-top: 80px;
         }
         
@@ -369,7 +414,16 @@
                 
                 <!-- Your professional bio (2-3 sentences) -->
                 <p>
-                    Olive Nwafor is a Product Manager with a passion for building products that help people live better lives.
+                    Olive leads full-cycle product strategy and development for AI-enabled solutions that enhance efficiency, productivity, and user engagement. 
+                    As a Product Manager, she partners with cross-functional teams to transform business and user needs into intuitive digital experiences that drive measurable impact.
+
+She specializes in building intelligent agents and AI-powered platforms using AI-assisted development tools for prototyping. 
+This approach accelerates the journey from idea to proof-of-concept, reducing time-to-value while bridging the gap between strategic vision and executable solutions.
+
+Her methodology combines technical frameworks in prompt engineering, fine-tuning, AI evals, agentic workflows and enterprise architecture expertise. This ensures her solutions are not only technically sound and scalable but also aligned with business objectives.
+Olive is passionate about the intersection of artificial intelligence, user experience, and business transformation. She continues to build products that make organizations smarter, faster, and more human-centered.
+
+She holds a Master of Science in Computer Information Systems and a Bachelor of Engineering in Computer Engineering.
                 </p>
             </section>
             
@@ -381,16 +435,22 @@
                 
                 <!-- Current role -->
                 <div class="experience-item">
-                    <div class="job-title">Product Manager</div>
-                    <div class="company">BlackRock</div>
-                    <p>Brief description of your role or key achievements</p>
+                    <div class="job-title">Product Manager <span class="role-label">Current</span></div>
+                    <div class="company">BlackRock Inc.</div>
                 </div>
-                
+
                 <!-- Previous role (optional - duplicate this block for more roles) -->
                 <div class="experience-item">
-                    <div class="job-title">Product Manager</div>
-                    <div class="company">Southwire Inc</div>
-                    <p>Brief description</p>
+                    <div class="job-title">Product Manager <span class="role-label">Past</span></div>
+                    <div class="company">Southwire Inc.</div>
+                </div>
+                <div class="experience-item">
+                    <div class="job-title">Product Manager <span class="role-label">Past</span></div>
+                    <div class="company">PrimeRevenue Inc.</div>
+                </div>
+                <div class="experience-item">
+                    <div class="job-title">Product Manager <span class="role-label">Past</span></div>
+                    <div class="company">Hewlett Packard Enterprise</div>
                 </div>
             </section>
             
@@ -441,7 +501,7 @@
                  BLOG/WRITING SECTION (Optional)
                  ============================================ -->
             <section id="blog">
-                <h2>Writing</h2>
+                <h2>Blog</h2>
                 
                 <!-- List of blog posts or articles -->
                 <ul class="writing-list">
@@ -458,7 +518,7 @@
                 
                 <!-- Or link to your blog platform -->
                 <p style="margin-top: 16px;">
-                    <a href="https://nextwaveintelligence.substack.com/" target="_blank">Read more on Substack →</a>
+                    <a href="https://nextwaveintelligence.substack.com/" target="_blank"><strong>More on Substack →</strong></a>
                 </p>
             </section>
             
@@ -468,11 +528,34 @@
             <section id="interests">
                 <h2>Interests</h2>
                 
-                <!-- Your personal interests or hobbies -->
+                <!-- AI & GPTs interest -->
+                <h3>AI & GPTs</h3>
+                <ul class="interests-list">
+                    <li>Side projects vibecoded with AI</li>
+                </ul>
+                
+                <!-- Fitness interest -->
+                <h3>Fitness</h3>
+                <ul class="interests-list">
+                    <li>Memberships in the Gym, Lagree, Pilates and Crossfit. I also occasionally run.</li>
+                </ul>
+                
+                <!-- Reads/Podcasts interest -->
+                <h3>Reads/Podcasts</h3>
+                <ul class="interests-list">
+                    <li><a href="https://fs.blog/complexity-bias/" target="_blank">Complexity Bias: Why We Prefer Complicated to Simple</a></li>
+                </ul>
+            </section>
+            
+            <!-- ============================================
+                 HEADSHOT SECTION
+                 ============================================ -->
+            <section id="headshot">
+                <h2>Headshot</h2>
+                
+                <!-- Download link for headshot image -->
                 <p>
-                    Write about your interests, hobbies, or things you're passionate about. 
-                    Keep it brief and personality-driven. This section helps visitors 
-                    connect with you on a personal level.
+                    <a href="headshot.jpg" download>Download Headshot</a>
                 </p>
             </section>
         </div>
