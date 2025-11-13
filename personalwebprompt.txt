@@ -1,0 +1,120 @@
+Create a clean, minimalist personal website similar to taslim.xyz. I have no web development experience, so please use simple, modern technologies and include detailed comments explaining what each part does.
+Technical Requirements
+
+Single HTML file with embedded CSS and JavaScript (for simplicity)
+Responsive design that works on mobile, tablet, and desktop
+Modern, clean aesthetic with smooth animations
+No external dependencies except Google Fonts (optional)
+Fast loading and lightweight
+
+Website Structure
+1. Header Section
+
+My name as the main heading (large, bold)
+Job title/tagline underneath (smaller, subtle)
+Consider: fade-in animation when page loads
+
+2. Main Content Sections (vertically stacked)
+About/Bio Section:
+
+Brief professional bio (2-3 sentences)
+Keep it concise and impactful
+
+Work/Experience Section:
+
+Current role and company
+Optional: Previous roles or key achievements
+Use simple formatting (not a full resume)
+
+Projects/Portfolio Section:
+
+3-5 notable projects or works
+Each with: title, brief description, and link
+Display as cards or clean list
+
+Blog/Writing Section (optional):
+
+Links to blog posts or articles
+Can link to external platforms (Medium, Substack, etc.)
+
+Interests Section:
+
+Personal interests or hobbies
+Keep it brief and personality-driven
+
+3. Footer Section
+
+Social media links (LinkedIn, Twitter/X, GitHub, etc.)
+Email contact (consider using "mailto:" link)
+Copyright or "Made with ❤️ in [City]" message
+
+Design Specifications
+Color Scheme
+
+Primary: Clean white or off-white background
+Text: Dark gray or near-black for readability
+Accent: One subtle color for links/highlights (blue, teal, or your choice)
+Use high contrast for accessibility
+
+Typography
+
+Font: Inter, Helvetica Neue, or system fonts for speed
+Heading sizes: Name (48-60px), Job title (18-24px), Section headings (24-32px)
+Body text: 16-18px for readability
+Line height: 1.6-1.8 for comfortable reading
+
+Spacing & Layout
+
+Maximum content width: 800px (centered)
+Generous padding/margins between sections
+Mobile: 20-30px side padding
+Desktop: sections spaced 80-100px apart vertically
+
+Interactive Elements
+
+Links: Underline on hover with smooth transition
+Subtle hover effects on clickable items
+Smooth scrolling if using anchor links
+Consider: gentle fade-in animations for content sections
+
+Features to Include
+
+Responsive Navigation (if needed):
+
+Smooth scroll to sections
+Or keep it simple with no nav (just scroll)
+
+
+Social Media Icons:
+
+Simple text links or minimal icons
+Open in new tab (target="_blank")
+
+
+Accessibility:
+
+Semantic HTML (header, main, section, footer tags)
+Alt text for any images
+Proper heading hierarchy (h1, h2, h3)
+Good color contrast ratios
+
+
+Performance:
+
+Optimize any images (compress, use WebP if possible)
+Minimal JavaScript (only if needed)
+Fast load time
+
+
+
+Content Placeholders
+Include placeholder text for:
+
+[Your Name]
+[Your Job Title]
+[Your Bio]
+[Company Name]
+[Project Names & Descriptions]
+[Social Media Links]
+[Email Address]
+[City/Location]
