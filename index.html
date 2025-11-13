@@ -7,10 +7,10 @@
     <meta name="description" content="Personal website of Olive Nwafor - Product Manager">
     <title>Olive Nwafor - Product Manager</title>
     
-    <!-- Google Fonts: Inter for a modern, clean look -->
+    <!-- Google Fonts: Montserrat for headings, Roboto for body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <style>
         /* ============================================
@@ -26,12 +26,12 @@
         
         /* Root variables for easy color/typography management */
         :root {
-            --bg-color: #FFE5E5;           /* Baby pink background */
+            --bg-color: #fbfbf2;           /* White background */
             --text-color: #253D5B;         /* Dark blue for main text */
             --text-light: #969696;         /* Medium gray for secondary text */
             --accent-color: #67697C;       /* Darker gray-blue for links */
             --accent-hover: #253D5B;       /* Dark blue on hover */
-            --card-bg: #B79D94;            /* Lighter beige-pink for cards */
+            --card-bg: #cfd2cd;            /* Lighter beige-pink for cards */
             --border-color: #B79D94;       /* Beige-pink borders */
             --max-width: 800px;            /* Maximum content width */
             --spacing-mobile: 20px;        /* Mobile side padding */
@@ -40,7 +40,7 @@
         
         /* Base body styles */
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
                         'Helvetica Neue', Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
@@ -62,15 +62,16 @@
            ============================================ */
         
         header {
-            padding: 120px 0 80px;         /* Top padding for breathing room */
+            padding: 120px 0 40px;         /* Top padding for breathing room, reduced bottom padding */
             text-align: left;              /* Left-aligned header */
             animation: fadeIn 1s ease-in;  /* Fade-in animation on load */
         }
         
         /* Main name heading - large and bold */
         h1 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 56px;               /* Large size for impact */
-            font-weight: 700;              /* Bold weight */
+            font-weight: 500;              /* Bold weight */
             margin-bottom: 16px;
             letter-spacing: -0.02em;       /* Tighter letter spacing for modern look */
             color: var(--text-color);
@@ -78,6 +79,7 @@
         
         /* Job title/tagline - smaller and subtle */
         .tagline {
+            font-family: 'Montserrat', sans-serif;
             font-size: 20px;
             font-weight: 400;
             color: var(--text-light);  /* Medium gray for subtle appearance */
@@ -110,6 +112,7 @@
         
         /* Section headings */
         h2 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 28px;
             font-weight: 600;
             margin-bottom: 24px;
@@ -119,6 +122,7 @@
         
         /* Subheadings for interests */
         h3 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 20px;
             font-weight: 600;
             margin-top: 24px;
@@ -151,6 +155,7 @@
         }
         
         .job-title {
+            font-family: 'Montserrat', sans-serif;
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 4px;
@@ -201,6 +206,7 @@
         }
         
         .project-title {
+            font-family: 'Montserrat', sans-serif;
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 8px;
@@ -416,14 +422,17 @@
                 <p>
                     Olive leads full-cycle product strategy and development for AI-enabled solutions that enhance efficiency, productivity, and user engagement. 
                     As a Product Manager, she partners with cross-functional teams to transform business and user needs into intuitive digital experiences that drive measurable impact.
-
-She specializes in building intelligent agents and AI-powered platforms using AI-assisted development tools for prototyping. 
-This approach accelerates the journey from idea to proof-of-concept, reducing time-to-value while bridging the gap between strategic vision and executable solutions.
-
-Her methodology combines technical frameworks in prompt engineering, fine-tuning, AI evals, agentic workflows and enterprise architecture expertise. This ensures her solutions are not only technically sound and scalable but also aligned with business objectives.
-Olive is passionate about the intersection of artificial intelligence, user experience, and business transformation. She continues to build products that make organizations smarter, faster, and more human-centered.
-
-She holds a Master of Science in Computer Information Systems and a Bachelor of Engineering in Computer Engineering.
+                </p>
+                
+                <p>
+                    She specializes in building intelligent agents and AI-powered platforms using AI-assisted development tools for prototyping. 
+                    This approach accelerates the journey from idea to proof-of-concept, reducing time-to-value while bridging the gap between strategic vision and executable solutions.
+                </p>
+                
+                <p>
+                    Her methodology combines technical frameworks in prompt engineering, fine-tuning, AI evals, agentic workflows and enterprise architecture expertise. This ensures her solutions are not only technically sound and scalable but also aligned with business objectives.
+                    Olive is passionate about the intersection of artificial intelligence, user experience, and business transformation. She continues to build products that make organizations smarter, faster, and more human-centered.
+                    She holds a Master of Science in Computer Information Systems and a Bachelor of Engineering in Computer Engineering.
                 </p>
             </section>
             
@@ -465,31 +474,30 @@ She holds a Master of Science in Computer Information Systems and a Bachelor of 
                     <!-- Project card 1 -->
                     <div class="project-card">
                         <div class="project-title">
-                            <a href="#" target="_blank">Project Name 1</a>
+                            <a href="#" target="_blank">BookBite</a>
                         </div>
                         <p class="project-description">
-                            Brief description of the project. What it does, 
-                            technologies used, or key features.
+                            Chat with AI about your favorite novels
                         </p>
                     </div>
                     
                     <!-- Project card 2 -->
                     <div class="project-card">
                         <div class="project-title">
-                            <a href="#" target="_blank">Project Name 2</a>
+                            <a href="#" target="_blank">TourATL</a>
                         </div>
                         <p class="project-description">
-                            Brief description of the project.
+                            Guide to Atlanta's hidden gems. Built with React Native and Expo.
                         </p>
                     </div>
                     
                     <!-- Project card 3 -->
                     <div class="project-card">
                         <div class="project-title">
-                            <a href="#" target="_blank">Project Name 3</a>
+                            <a href="#" target="_blank">Planta</a>
                         </div>
                         <p class="project-description">
-                            Brief description of the project.
+                            For healthy eating enthusiasts, Planta guides you on how to grow your favorite ingredients at home.
                         </p>
                     </div>
                     
@@ -537,7 +545,7 @@ She holds a Master of Science in Computer Information Systems and a Bachelor of 
                 <!-- Fitness interest -->
                 <h3>Fitness</h3>
                 <ul class="interests-list">
-                    <li>Memberships in the Gym, Lagree, Pilates and Crossfit. I also occasionally run.</li>
+                    <li>Memberships in my local gym, lagree, pilates and crossfit. I also run occasionally.</li>
                 </ul>
                 
                 <!-- Reads/Podcasts interest -->
@@ -555,7 +563,7 @@ She holds a Master of Science in Computer Information Systems and a Bachelor of 
                 
                 <!-- Download link for headshot image -->
                 <p>
-                    <a href="headshot.jpg" download>Download Headshot</a>
+                    <a href="headshot.jpg" download>download headshot</a>
                 </p>
             </section>
         </div>
@@ -571,11 +579,6 @@ She holds a Master of Science in Computer Information Systems and a Bachelor of 
                 <!-- LinkedIn link -->
                 <a href="https://www.linkedin.com/in/olive-nwafor" target="_blank" rel="noopener noreferrer">
                     LinkedIn
-                </a>
-                
-                <!-- Twitter/X link -->
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                    Twitter
                 </a>
                 
                 <!-- GitHub link -->
