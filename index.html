@@ -45,7 +45,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.7;              /* Comfortable reading line height */
-            font-size: 18px;               /* Readable base font size */
+            font-size: 16px;               /* Reduced base font size */
             -webkit-font-smoothing: antialiased;  /* Smooth text on Mac */
             -moz-osx-font-smoothing: grayscale;
         }
@@ -70,7 +70,7 @@
         /* Main name heading - large and bold */
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 56px;               /* Large size for impact */
+            font-size: 46px;               /* Large size for impact */
             font-weight: 500;              /* Bold weight */
             margin-bottom: 16px;
             letter-spacing: -0.02em;       /* Tighter letter spacing for modern look */
@@ -96,7 +96,7 @@
         
         /* Each section has consistent spacing */
         section {
-            margin-bottom: 80px;
+            margin-bottom: 50px;           /* Reduced spacing between sections */
             animation: fadeInUp 0.8s ease-out;
             animation-fill-mode: both;     /* Keeps final state after animation */
         }
@@ -109,6 +109,7 @@
         section:nth-child(5) { animation-delay: 0.5s; }
         section:nth-child(6) { animation-delay: 0.6s; }
         section:nth-child(7) { animation-delay: 0.7s; }
+        section:nth-child(8) { animation-delay: 0.8s; }
         
         /* Section headings */
         h2 {
@@ -138,6 +139,11 @@
         p {
             margin-bottom: 16px;
             color: var(--text-color);
+        }
+        
+        /* Justify text in About section */
+        #about p {
+            text-align: justify;
         }
         
         /* ============================================
@@ -280,7 +286,7 @@
             text-align: center;
             padding: 60px 0 40px;
             border-top: 1px solid rgba(103, 105, 124, 0.3);  /* Subtle gray-blue border */
-            margin-top: 80px;
+            margin-top: 30px;  /* Reduced margin for tighter spacing */
         }
         
         .social-links {
@@ -348,7 +354,7 @@
             }
             
             section {
-                margin-bottom: 60px;       /* Less spacing on smaller screens */
+                margin-bottom: 40px;       /* Reduced spacing on smaller screens */
             }
             
             .container {
@@ -430,8 +436,12 @@
                 </p>
                 
                 <p>
-                    Her methodology combines technical frameworks in prompt engineering, fine-tuning, AI evals, agentic workflows and enterprise architecture expertise. This ensures her solutions are not only technically sound and scalable but also aligned with business objectives.
+                    Her methodology combines technical frameworks in prompt engineering, fine-tuning, RAGs, AI evals, agentic workflows and enterprise architecture expertise. This ensures her solutions are scalable and aligned with business objectives.
                     Olive is passionate about the intersection of artificial intelligence, user experience, and business transformation. She continues to build products that make organizations smarter, faster, and more human-centered.
+                </p>
+                
+                
+                <p>
                     She holds a Master of Science in Computer Information Systems and a Bachelor of Engineering in Computer Engineering.
                 </p>
             </section>
@@ -461,6 +471,11 @@
                     <div class="job-title">Product Manager <span class="role-label">Past</span></div>
                     <div class="company">Hewlett Packard Enterprise</div>
                 </div>
+                
+                <!-- Resume link -->
+                <p style="margin-top: 24px;">
+                    <a href="resume.pdf" target="_blank">View resume for details</a>
+                </p>
             </section>
             
             <!-- ============================================
@@ -531,6 +546,23 @@
             </section>
             
             <!-- ============================================
+                 MEDIA SECTION
+                 ============================================ -->
+            <section id="media">
+                <h2>Media</h2>
+                
+                <!-- List of media interviews -->
+                <ul class="writing-list">
+                    <li>
+                        <a href="https://pmnewsnigeria.com/2025/03/26/balancing-the-scales-data-informed-vs-data-driven-product-strategy/" target="_blank">Balancing the Scales: Data-Informed vs Data-Driven Product Strategy</a>
+                    </li>
+                    <li>
+                        <a href="https://voyageatl.com/interview/rising-stars-meet-olive-nwafor-of-atlanta/" target="_blank">Rising Stars: Meet Olive Nwafor of Atlanta</a>
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- ============================================
                  INTERESTS SECTION
                  ============================================ -->
             <section id="interests">
@@ -549,9 +581,10 @@
                 </ul>
                 
                 <!-- Reads/Podcasts interest -->
-                <h3>Reads/Podcasts</h3>
+                <h3>Reads & Podcasts</h3>
                 <ul class="interests-list">
                     <li><a href="https://fs.blog/complexity-bias/" target="_blank">Complexity Bias: Why We Prefer Complicated to Simple</a></li>
+                    <li><a href="https://www.amazon.com/Tiny-Experiments-Freely-Goal-Obsessed-World/dp/0593715136/ref=sr_1_1?crid=291XFLCLT721S&dib=eyJ2IjoiMSJ9.95SBbQWDXLtFhiCbvZQwzvi0PACAEaVVXYs7hiNf1KQ3tFYRwB610PEsOS6Sew9Hf2Roabr38SCTo5ToiRZZVW-NTjm_-GoowAaavU20eP2iiEuaHQqng9AdlEc8kOmbK2gQLtoRICykAT-3w4ECkw.-hL8JlDmIXYddNSX8Vg65-Cm5gzNSFo6q7wSNlwdNac&dib_tag=se&keywords=tiny+experiments&qid=1763061912&s=books&sprefix=Tiny+ex%2Cstripbooks%2C114&sr=1-1" target="_blank">Tiny Experiments: How to live freely in a Goal-Obsessed World</a></li>
                 </ul>
             </section>
             
@@ -599,7 +632,7 @@
                 Made with ❤️ in ATL
             </p>
             <p class="footer-text" style="margin-top: 8px;">
-                © 2024 Olive Nwafor. All rights reserved.
+                © 2026 Olive Nwafor. All rights reserved.
             </p>
         </div>
     </footer>
