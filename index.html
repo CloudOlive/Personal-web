@@ -50,8 +50,7 @@
         
         /* Base body styles */
         body {
-            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
-                        'Helvetica Neue', Arial, sans-serif;
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
             background-color: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.7;              /* Comfortable reading line height */
@@ -92,7 +91,7 @@
         
         /* Job title/tagline - subtle and professional */
         .tagline {
-            font-family: 'Montserrat', sans-serif;
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
             font-size: 18px;
             font-weight: 400;
             color: var(--text-secondary);
@@ -231,6 +230,7 @@
         }
         
         .experience-date {
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
             font-size: 14px;
             color: var(--text-secondary);
             font-weight: 400;
@@ -238,9 +238,19 @@
         }
         
         .company {
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
             font-size: 16px;
             color: var(--text-secondary);
             margin-bottom: 8px;
+        }
+        
+        .experience-description {
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 16px;
+            color: var(--text-primary);  /* Match About section text color */
+            line-height: 1.7;  /* Match About section line height */
+            margin-top: 12px;
+            margin-bottom: 0;
         }
         
         .role-label {
@@ -311,6 +321,7 @@
         }
         
         .project-year {
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
             font-size: 14px;
             color: var(--text-secondary);
             font-weight: 400;
@@ -318,6 +329,7 @@
         }
         
         .project-description {
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
             color: var(--text-secondary);
             margin-bottom: 16px;
             line-height: 1.6;
@@ -337,6 +349,7 @@
             background-color: rgba(79, 125, 255, 0.2);  /* 20% opacity blue background */
             color: var(--accent-primary);  /* Blue text */
             border-radius: 4px;  /* Square corners */
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
             font-size: 12px;
             font-weight: 400;  /* Not bold */
             letter-spacing: 0.3px;
@@ -413,6 +426,39 @@
         }
         
         /* ============================================
+           HEADSHOT DOWNLOAD BUTTON
+           ============================================ */
+        
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .download-button:hover {
+            border-color: var(--accent-primary);
+            color: var(--text-primary);
+            background-color: var(--bg-secondary);
+        }
+        
+        .download-button svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+        
+        /* ============================================
            FOOTER SECTION
            ============================================ */
         
@@ -432,6 +478,7 @@
         }
         
         .social-links a {
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
             font-size: 16px;
             color: var(--text-secondary);
             transition: all 0.2s ease;
@@ -443,6 +490,7 @@
         }
         
         .footer-text {
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
             font-size: 14px;
             color: var(--text-muted);
             margin-top: 16px;
@@ -614,38 +662,50 @@
                 <!-- Current role -->
                 <div class="experience-item">
                     <div class="experience-header">
-                        <div class="job-title">Product Manager <span class="role-label">Current</span></div>
+                        <div class="job-title">Product Manager</div>
                         <span class="experience-date">2025 - Present</span>
                     </div>
                     <div class="company">BlackRock Inc.</div>
+                    <p class="experience-description">
+                        Defined and executed the product development for enterprise AI copilot agents, partnering cross-functionally to deliver intuitive, AI-driven experiences that achieved global adoption and transformed customer and employee journeys.
+                    </p>
                 </div>
 
                 <!-- Previous role (optional - duplicate this block for more roles) -->
                 <div class="experience-item">
                     <div class="experience-header">
-                        <div class="job-title">Product Manager <span class="role-label">Past</span></div>
+                        <div class="job-title">Product Manager</div>
                         <span class="experience-date">2023 - 2024</span>
                     </div>
                     <div class="company">Southwire Inc.</div>
+                    <p class="experience-description">
+                        Owned product strategy, technical execution, and go-to-market delivery for a global solutions product line, using customer insights and performance metrics to drive scalable releases and continuous improvement.
+                    </p>
                 </div>
                 <div class="experience-item">
                     <div class="experience-header">
-                        <div class="job-title">Product Manager <span class="role-label">Past</span></div>
+                        <div class="job-title">Product Manager</div>
                         <span class="experience-date">2023 - 2023</span>
                     </div>
                     <div class="company">PrimeRevenue Inc.</div>
+                    <p class="experience-description">
+                        Led product enablement and delivery initiatives, deployed data-driven product guides, and launched financial reporting features that improved compliance, usability, and cross-company communication.
+                    </p>
                 </div>
                 <div class="experience-item">
                     <div class="experience-header">
-                        <div class="job-title">Product Manager <span class="role-label">Past</span></div>
+                        <div class="job-title">Product Manager</div>
                         <span class="experience-date">2019 - 2022</span>
                     </div>
                     <div class="company">Hewlett Packard Enterprise</div>
+                    <p class="experience-description">
+                        Drove product development and stakeholder alignment for HPE's SaaS configuration platform, improving user satisfaction, streamlining workflows, and enabling faster, efficient partner and engineer experiences.
+                    </p>
                 </div>
                 
                 <!-- Resume link -->
                 <p style="margin-top: 24px;">
-                    <a href="resume.pdf" target="_blank">View my full resume for more details</a>
+                    <a href="resume.pdf" target="_blank" class="resume-link"><strong>Full resume →</strong></a>
                 </p>
             </section>
             
@@ -666,7 +726,7 @@
                             <span class="project-year">2025</span>
                         </div>
                         <p class="project-description">
-                            Guide to some of the best Atlanta's restaurants categorized by cuisine. Built with JavaScript,React Native and Expo.
+                            Guide to some of the best Atlanta restaurants categorized by cuisine. Built with JavaScript,React Native and Expo.
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">Mobile</span>
@@ -767,9 +827,12 @@
                 <h2>Headshot</h2>
                 
                 <!-- Download link for headshot image -->
-                <p>
-                    <a href="headshot.jpg" download>download headshot</a>
-                </p>
+                <a href="headshot.jpg" download class="download-button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 12v7H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2v9.67z" fill="currentColor"/>
+                    </svg>
+                    <span>download headshot</span>
+                </a>
             </section>
         </div>
     </main>
