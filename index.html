@@ -215,16 +215,30 @@
             border-bottom: none;           /* No border on last item */
         }
         
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4px;
+        }
+        
         .job-title {
             font-family: 'Montserrat', sans-serif;
             font-size: 20px;
             font-weight: 600;
-            margin-bottom: 4px;
             color: var(--text-primary);
+            flex: 1;
+        }
+        
+        .experience-date {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-left: 16px;
         }
         
         .company {
-            font-size: 18px;
+            font-size: 16px;
             color: var(--text-secondary);
             margin-bottom: 8px;
         }
@@ -534,7 +548,7 @@
             <!-- Social media icons -->
             <div class="social-icons">
                 <!-- LinkedIn icon -->
-                <a href="https://www.linkedin.com/in/olive-nwafor" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/olivenwafor" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="currentColor"/>
                     </svg>
@@ -599,27 +613,39 @@
                 
                 <!-- Current role -->
                 <div class="experience-item">
-                    <div class="job-title">Product Manager <span class="role-label">Current</span></div>
+                    <div class="experience-header">
+                        <div class="job-title">Product Manager <span class="role-label">Current</span></div>
+                        <span class="experience-date">2025 - Present</span>
+                    </div>
                     <div class="company">BlackRock Inc.</div>
                 </div>
 
                 <!-- Previous role (optional - duplicate this block for more roles) -->
                 <div class="experience-item">
-                    <div class="job-title">Product Manager <span class="role-label">Past</span></div>
+                    <div class="experience-header">
+                        <div class="job-title">Product Manager <span class="role-label">Past</span></div>
+                        <span class="experience-date">2023 - 2024</span>
+                    </div>
                     <div class="company">Southwire Inc.</div>
                 </div>
                 <div class="experience-item">
-                    <div class="job-title">Product Manager <span class="role-label">Past</span></div>
+                    <div class="experience-header">
+                        <div class="job-title">Product Manager <span class="role-label">Past</span></div>
+                        <span class="experience-date">2023 - 2023</span>
+                    </div>
                     <div class="company">PrimeRevenue Inc.</div>
                 </div>
                 <div class="experience-item">
-                    <div class="job-title">Product Manager <span class="role-label">Past</span></div>
+                    <div class="experience-header">
+                        <div class="job-title">Product Manager <span class="role-label">Past</span></div>
+                        <span class="experience-date">2019 - 2022</span>
+                    </div>
                     <div class="company">Hewlett Packard Enterprise</div>
                 </div>
                 
                 <!-- Resume link -->
                 <p style="margin-top: 24px;">
-                    <a href="resume.pdf" target="_blank">View resume for details</a>
+                    <a href="resume.pdf" target="_blank">View my full resume for more details</a>
                 </p>
             </section>
             
@@ -635,29 +661,12 @@
                     <div class="project-card">
                         <div class="project-header">
                             <div class="project-title">
-                                <a href="#" target="_blank">BookBite</a>
+                                <a href="#" target="_blank">EatATL</a>
                             </div>
-                            <span class="project-year">2024</span>
+                            <span class="project-year">2025</span>
                         </div>
                         <p class="project-description">
-                            Chat with AI about your favorite novels
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">AI/ML</span>
-                            <span class="project-tag">Product Strategy</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Project card 2 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-title">
-                                <a href="#" target="_blank">TourATL</a>
-                            </div>
-                            <span class="project-year">2024</span>
-                        </div>
-                        <p class="project-description">
-                            Guide to Atlanta's hidden gems. Built with React Native and Expo.
+                            Guide to some of the best Atlanta's restaurants categorized by cuisine. Built with JavaScript,React Native and Expo.
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">Mobile</span>
@@ -677,7 +686,7 @@
                             For healthy eating enthusiasts, Planta guides you on how to grow your favorite ingredients at home.
                         </p>
                         <div class="project-tags">
-                            <span class="project-tag">Product Design</span>
+                            <span class="project-tag">JavaScript</span>
                             <span class="project-tag">Health & Wellness</span>
                         </div>
                     </div>
