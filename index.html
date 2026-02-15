@@ -1,914 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags for proper rendering and SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website of Olive Nwafor - Product Manager">
-    <title>Olive Nwafor - Product Manager</title>
+    <meta name="description" content="Olive Nwafor - Product Manager specializing in AI-enabled products">
+    <title>Olive Nwafor</title>
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    
-    <!-- Google Fonts: Montserrat for headings, Roboto for body text -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <style>
-        /* ============================================
-           CSS STYLES - All design rules are here
-           ============================================ */
-        
-        /* Reset default browser styles for consistency */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        /* Root variables - Premium Dark Mode Design System */
-        :root {
-            /* Backgrounds */
-            --bg-primary: #0F1115;          /* Primary background */
-            --bg-secondary: #161A22;       /* Card background */
-            --border-color: #232837;        /* Section divider / Border */
-            
-            /* Text */
-            --text-primary: #E6EAF0;        /* Primary text */
-            --text-secondary: #A4ACB9;      /* Secondary text */
-            --text-muted: #7A8293;          /* Muted text */
-            
-            /* Accent */
-            --accent-primary: #4F7DFF;      /* Muted blue accent */
-            --accent-hover: #6B92FF;        /* Accent hover */
-            --hover-overlay: rgba(79, 125, 255, 0.08);  /* Hover overlay */
-            --card-glow: rgba(79, 125, 255, 0.15);       /* Card glow shadow */
-            
-            /* Layout */
-            --max-width: 800px;
-            --spacing-mobile: 20px;
-            --spacing-desktop: 100px;
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
         }
-        
-        /* Base body styles */
-        body {
-            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.7;              /* Comfortable reading line height */
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        /* Main container - centers content and sets max width */
-        .container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 var(--spacing-mobile);
-        }
-        
-        /* ============================================
-           HEADER SECTION
-           ============================================ */
-        
-        header {
-            padding: 100px 0 60px;         /* Generous vertical spacing */
-            text-align: left;
-            animation: fadeIn 1s ease-in;
-            border-bottom: 1px solid var(--border-color);  /* Subtle divider */
-            margin-bottom: 60px;
-        }
-        
-        /* Main name heading - large and confident */
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 48px;               /* Large, confident size */
-            font-weight: 600;              /* Strong weight */
-            margin-bottom: 12px;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
-            line-height: 1.2;
-        }
-        
-        /* Job title/tagline - subtle and professional */
-        .tagline {
-            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-            font-size: 18px;
-            font-weight: 400;
-            color: var(--text-secondary);
-            margin-top: 8px;
-            margin-bottom: 24px;
-        }
-        
-        /* Social icons in header */
-        .social-icons {
+
+        .landing {
+            position: relative;
+            width: 100%;
+            height: 100vh;
             display: flex;
-            gap: 20px;
-            margin-top: 8px;
-        }
-        
-        .social-icons a {
-            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
-            color: var(--accent-primary);
-            transition: all 0.2s ease;
-            border-radius: 6px;
-        }
-        
-        .social-icons a:hover {
-            color: var(--accent-hover);
-            background-color: var(--hover-overlay);
-            transform: translateY(-2px);
-        }
-        
-        .social-icons svg {
-            width: 20px;
-            height: 20px;
-        }
-        
-        /* ============================================
-           MAIN CONTENT SECTIONS
-           ============================================ */
-        
-        main {
-            padding-bottom: 40px;  /* Reduced padding before footer */
-        }
-        
-        /* Each section has consistent spacing */
-        section {
-            margin-bottom: 80px;           /* Generous vertical spacing */
-            padding-bottom: 60px;
-            border-bottom: 1px solid var(--border-color);  /* Subtle section dividers */
-            animation: fadeInUp 0.8s ease-out;
-            animation-fill-mode: both;
-        }
-        
-        section:last-of-type {
-            border-bottom: none;           /* No border on last section */
-            margin-bottom: 40px;           /* Reduced margin for last section */
-            padding-bottom: 40px;         /* Reduced padding for last section */
-        }
-        
-        /* Stagger animations for each section */
-        section:nth-child(1) { animation-delay: 0.1s; }
-        section:nth-child(2) { animation-delay: 0.2s; }
-        section:nth-child(3) { animation-delay: 0.3s; }
-        section:nth-child(4) { animation-delay: 0.4s; }
-        section:nth-child(5) { animation-delay: 0.5s; }
-        section:nth-child(6) { animation-delay: 0.6s; }
-        section:nth-child(7) { animation-delay: 0.7s; }
-        section:nth-child(8) { animation-delay: 0.8s; }
-        
-        /* Section headings - clearly distinguished */
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 32px;
-            margin-top: 0;
-            color: var(--text-primary);
-            letter-spacing: -0.01em;
-            line-height: 1.3;
-        }
-        
-        /* Subheadings for interests */
-        h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 24px;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-        }
-        
-        h3:first-of-type {
-            margin-top: 0;  /* No top margin for first subheading */
-        }
-        
-        /* Paragraph text styling */
-        p {
-            margin-bottom: 16px;
-            color: var(--text-primary);
-            line-height: 1.7;
-        }
-        
-        /* Justify text in About section */
-        #about p {
-            text-align: justify;
-            color: var(--text-primary);
-        }
-        
-        /* ============================================
-           WORK/EXPERIENCE SECTION
-           ============================================ */
-        
-        .experience-item {
-            margin-bottom: 32px;
-            padding-bottom: 32px;
-            border-bottom: 1px solid var(--border-color);  /* Subtle divider */
-        }
-        
-        .experience-item:last-child {
-            border-bottom: none;           /* No border on last item */
-        }
-        
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 4px;
-        }
-        
-        .job-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--text-primary);
-            flex: 1;
-        }
-        
-        .experience-date {
-            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-            font-size: 14px;
-            color: var(--accent-primary);
-            font-weight: 400;
-            margin-left: 16px;
-        }
-        
-        .company {
-            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-            font-size: 16px;
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-        }
-        
-        .experience-description {
-            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-            font-size: 16px;
-            color: var(--text-primary);  /* Match About section text color */
-            line-height: 1.7;  /* Match About section line height */
-            margin-top: 12px;
-            margin-bottom: 0;
-        }
-        
-        .role-label {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent-primary);
-            margin-left: 8px;
-            padding: 4px 10px;
-            background-color: var(--hover-overlay);
-            border-radius: 6px;
-            border: 1px solid rgba(79, 125, 255, 0.2);
-        }
-        
-        /* ============================================
-           PROJECTS SECTION
-           ============================================ */
-        
-        .project-list {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;                     /* Space between project cards */
-        }
-        
-        .project-card {
-            padding: 24px;
-            background-color: var(--bg-secondary);  /* Card background */
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            transition: all 0.2s ease;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--card-glow);
-            border-color: var(--accent-primary);
-        }
-        
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-        
-        .project-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin: 0;
-            flex: 1;
-        }
-        
-        .project-title a {
-            color: var(--text-primary);
-            text-decoration: none;
-        }
-        
-        .project-title a:hover {
-            color: var(--accent-hover);
-        }
-        
-        .project-year {
-            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-            font-size: 14px;
-            color: var(--accent-primary);
-            font-weight: 400;
-            margin-left: 16px;
-        }
-        
-        .project-description {
-            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-            line-height: 1.6;
-            flex: 1;
-        }
-        
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: auto;
-        }
-        
-        .project-tag {
-            display: inline-block;
-            padding: 6px 12px;
-            background-color: rgba(79, 125, 255, 0.2);  /* 20% opacity blue background */
-            color: var(--accent-primary);  /* Blue text */
-            border-radius: 4px;  /* Square corners */
-            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-            font-size: 12px;
-            font-weight: 400;  /* Not bold */
-            letter-spacing: 0.3px;
-        }
-        
-        /* ============================================
-           LINKS STYLING
-           ============================================ */
-        
-        a {
-            color: var(--accent-primary);
-            text-decoration: none;
-            transition: all 0.2s ease;
-            border-bottom: 1px solid transparent;
-        }
-        
-        a:hover {
-            color: var(--accent-hover);
-            border-bottom-color: var(--accent-hover);
+            background-color: #0F1115;
+            background-image:
+                radial-gradient(ellipse at 20% 50%, rgba(79, 125, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(79, 125, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 0%, rgba(79, 125, 255, 0.03) 0%, transparent 60%);
+            overflow: hidden;
         }
 
-        /* Emphasized inline links (e.g., resume, side projects) */
-        .link-emphasis {
-            border-bottom-color: var(--accent-primary);
+        /* Subtle animated grain texture */
+        .landing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 1;
         }
 
-        .link-emphasis:hover {
-            border-bottom-color: var(--accent-hover);
-        }
-        
-        /* ============================================
-           WRITING SECTION - Bulleted List
-           ============================================ */
-        
-        .writing-list {
-            list-style-type: disc;          /* Standard bullet points */
-            padding-left: 24px;             /* Indentation for bullets */
-            margin-bottom: 16px;
-        }
-        
-        .writing-list li {
-            margin-bottom: 12px;
-            line-height: 1.6;
-            color: var(--text-primary);
-        }
-        
-        .writing-list li a {
-            color: var(--text-primary);
-            transition: all 0.2s ease;
-        }
-        
-        .writing-list li a:hover {
-            color: var(--accent-hover);
-        }
-        
-        .writing-list li:last-child {
-            margin-bottom: 0;                /* No margin on last item */
-        }
-        
-        /* ============================================
-           INTERESTS SECTION - Bulleted List
-           ============================================ */
-        
-        .interests-list {
-            list-style-type: disc;          /* Standard bullet points */
-            padding-left: 24px;             /* Indentation for bullets */
-            margin-bottom: 24px;            /* Space after each list */
-            margin-top: 0;                  /* No top margin */
-        }
-        
-        .interests-list li {
-            margin-bottom: 0;
-            line-height: 1.6;
-            color: var(--text-primary);
-        }
-        
-        .interests-list li a {
-            color: var(--text-primary);
-        }
-        
-        .interests-list li a:hover {
-            color: var(--accent-hover);
-        }
-        
-        /* ============================================
-           HEADSHOT DOWNLOAD BUTTON
-           ============================================ */
-        
-        .download-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 20px;
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-        
-        .download-button:hover {
-            border-color: var(--accent-primary);
-            color: var(--text-primary);
-            background-color: var(--bg-secondary);
-        }
-        
-        .download-button svg {
-            width: 16px;
-            height: 16px;
-            flex-shrink: 0;
-        }
-        
-        /* ============================================
-           FOOTER SECTION
-           ============================================ */
-        
-        footer {
+        .landing-content {
+            position: relative;
+            z-index: 2;
             text-align: center;
-            padding: 60px 0 40px;
-            border-top: 1px solid var(--border-color);
-            margin-top: 0;
+            animation: fadeIn 1.2s ease-out;
         }
-        
-        .social-links {
+
+        .site-name {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 72px;
+            color: #E6EAF0;
+            letter-spacing: 0.02em;
+            margin-bottom: 40px;
+            line-height: 1.1;
+        }
+
+        .nav-links {
             display: flex;
+            gap: 40px;
             justify-content: center;
-            gap: 24px;
-            margin-bottom: 24px;
-            flex-wrap: wrap;               /* Wrap on mobile */
+            flex-wrap: wrap;
         }
-        
-        .social-links a {
-            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-            font-size: 16px;
-            color: var(--text-secondary);
-            transition: all 0.2s ease;
+
+        .nav-links a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #A4ACB9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 4px 0;
+            position: relative;
         }
-        
-        .social-links a:hover {
-            color: var(--accent-hover);
-            border-bottom-color: var(--accent-hover);
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background-color: #4F7DFF;
+            transition: width 0.3s ease;
         }
-        
-        .footer-text {
-            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-            font-size: 14px;
-            color: var(--text-muted);
-            margin-top: 16px;
+
+        .nav-links a:hover {
+            color: #E6EAF0;
         }
-        
-        /* ============================================
-           ANIMATIONS
-           ============================================ */
-        
-        /* Fade-in animation for header */
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        
-        /* Fade-in and slide-up animation for sections */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(10px);
             }
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
-        /* ============================================
-           RESPONSIVE DESIGN - Mobile & Tablet
-           ============================================ */
-        
-        /* Tablet styles (768px and below) */
+
+        /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 42px;           /* Slightly smaller on tablet */
+            .site-name {
+                font-size: 52px;
+                margin-bottom: 32px;
             }
-            
-            .tagline {
-                font-size: 18px;
+
+            .nav-links {
+                gap: 24px;
             }
-            
-            section {
-                margin-bottom: 40px;       /* Reduced spacing on smaller screens */
-            }
-            
-            .container {
-                padding: 0 30px;           /* More side padding on tablet */
+
+            .nav-links a {
+                font-size: 12px;
             }
         }
-        
-        /* Mobile styles (480px and below) */
+
         @media (max-width: 480px) {
-            header {
-                padding: 80px 0 60px;      /* Less padding on mobile */
+            .site-name {
+                font-size: 40px;
+                margin-bottom: 28px;
             }
-            
-            h1 {
-                font-size: 36px;           /* Smaller heading on mobile */
+
+            .nav-links {
+                gap: 20px;
+                padding: 0 20px;
             }
-            
-            .tagline {
-                font-size: 16px;
-            }
-            
-            h2 {
-                font-size: 24px;           /* Smaller section headings */
-            }
-            
-            body {
-                font-size: 16px;           /* Slightly smaller body text */
-            }
-            
-            .container {
-                padding: 0 var(--spacing-mobile);
-            }
-            
-            .project-card {
-                padding: 20px;             /* Less padding in cards */
-            }
-            
-            .social-links {
-                gap: 16px;                 /* Tighter spacing for social links */
+
+            .nav-links a {
+                font-size: 11px;
+                letter-spacing: 0.12em;
             }
         }
     </style>
 </head>
 <body>
-    <!-- ============================================
-         HEADER SECTION - Your name and tagline
-         ============================================ -->
-    <header>
-        <div class="container">
-            <!-- Main heading: Your name (largest text on page) -->
-            <h1>Olive Nwafor</h1>
-            
-            <!-- Job title or tagline (appears below name) -->
-            <p class="tagline">Product Manager</p>
-            
-            <!-- Social media icons -->
-            <div class="social-icons">
-                <!-- LinkedIn icon -->
-                <a href="https://www.linkedin.com/in/olivenwafor" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="currentColor"/>
-                    </svg>
-                </a>
-                
-                <!-- Email icon -->
-                <a href="mailto:nwaforolive22@gmail.com" aria-label="Email">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
-                    </svg>
-                </a>
-                
-                <!-- GitHub icon -->
-                <a href="https://github.com/CloudOlive" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="currentColor"/>
-                    </svg>
-                </a>
-            </div>
+    <div class="landing">
+        <div class="landing-content">
+            <h1 class="site-name">Olive Nwafor</h1>
+            <nav class="nav-links">
+                <a href="about.html">About</a>
+                <a href="work.html">Work</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </div>
-    </header>
-    
-    <!-- ============================================
-         MAIN CONTENT - All sections go here
-         ============================================ -->
-    <main>
-        <div class="container">
-            <!-- ============================================
-                 ABOUT/BIO SECTION
-                 ============================================ -->
-            <section id="about">
-                <!-- Section heading -->
-                <h2>About</h2>
-                
-                <!-- Your professional bio (4 paragraphs) -->
-                <p>
-                    Olive is a product manager specializing in AI-enabled products with experience spanning 0 → 1 launches, large-scale platform optimization, and emerging techologies. She leads full-cycle strategy and development for products that enhance efficiency, productivity, and user engagement. As a product manager, she partners with cross-functional teams to transform business and user needs into intuitive digital experiences that drive measurable impact.
-                </p>
-                
-                <p>
-                    Her methodology combines technical frameworks in prompt engineering, fine-tuning, AI evals, agentic workflows and multi-agent architecture expertise. This ensures her solutions are not only technically sound and scalable but also aligned with business objectives. Her approach blends hands-on technical fluency with a focus on usability, impact and speed to market.
-                </p>
-                
-                <p>
-                    Olive is passionate about the intersection of agentic AI, user experience, and business transformation. She continues to build products that make organizations smarter, faster, and more human-centered.
-                </p>
-                
-                <p>
-                    She holds a Master of Science in Computer Information Systems and a Bachelor of Engineering in Computer Engineering.
-                </p>
-            </section>
-            
-            <!-- ============================================
-                 WORK/EXPERIENCE SECTION
-                 ============================================ -->
-            <section id="work">
-                <h2>Work</h2>
-                
-                <!-- Current role -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="job-title">Product Manager, Data/AI</div>
-                        <span class="experience-date">2025 - Present</span>
-                    </div>
-                    <div class="company">BlackRock Inc.</div>
-                    <p class="experience-description">
-                        Drove enterprise AI agent strategy, delivery and global adoption across business units',  through scalable platforms, governance frameworks, and strategic build decisions that democratized org-wide AI access.
-                    </p>
-                </div>
-
-                <!-- Previous role (optional - duplicate this block for more roles) -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="job-title">Product Manager</div>
-                        <span class="experience-date">2023 - 2024</span>
-                    </div>
-                    <div class="company">Southwire Inc.</div>
-                    <p class="experience-description">
-                        Owned product strategy, technical execution, and go-to-market delivery for a global solutions product line, using customer insights and performance metrics to drive scalable releases and continuous improvement.
-                    </p>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="job-title">Product Manager</div>
-                        <span class="experience-date">2023 - 2023</span>
-                    </div>
-                    <div class="company">PrimeRevenue Inc.</div>
-                    <p class="experience-description">
-                        Launched financial reporting features that improved compliance, usability, and cross-company communication. Led product enablement and delivery initiatives and deployed data-driven product guides.
-                    </p>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="job-title">Product Manager</div>
-                        <span class="experience-date">2019 - 2022</span>
-                    </div>
-                    <div class="company">Hewlett Packard Enterprise</div>
-                    <p class="experience-description">
-                        Coordinated product development and stakeholder alignment for HPE's SaaS configuration platform, improving user satisfaction, streamlining workflows, and enabling faster, efficient partner and engineer experiences.
-                    </p>
-                </div>
-                
-                <!-- Resume link -->
-                <p style="margin-top: 24px;">
-                    <a href="oliveresume.pdf" target="_blank" class="resume-link"><strong>Full resume →</strong></a>
-                </p>
-            </section>
-            
-            <!-- ============================================
-                 PROJECTS/PORTFOLIO SECTION
-                 ============================================ -->
-            <section id="projects">
-                <h2>Projects</h2>
-                
-                <!-- Project list container -->
-                <div class="project-list">
-                    <!-- Project card 1 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-title">
-                                <a href="https://www.tipright.org" target="_blank" rel="noopener noreferrer">TippyAI</a>
-                            </div>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <p class="project-description">
-                            Fast splits, named shares, and cash tip helpers for small groups. Built with React.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Mobile</span>
-                            <span class="project-tag">React Native</span>
-                            <span class="project-tag">JSON</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Project card 3 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-title">
-                                <a href="https://www.eatatl.xyz" target="_blank" rel="noopener noreferrer">EatATL</a>
-                            </div>
-                            <span class="project-year">2023</span>
-                        </div>
-                        <p class="project-description">
-                            Guide to some of the best Atlanta restaurants categorized by cuisine. Built with JavaScript.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">Food & Restaurants</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Add more project cards by copying the above structure -->
-                </div>
-            </section>
-            
-            <!-- ============================================
-                 BLOG/WRITING SECTION (Optional)
-                 ============================================ -->
-            <section id="blog">
-                <h2>Blog</h2>
-                
-                <!-- List of blog posts or articles -->
-                <ul class="writing-list">
-                    <li>
-                        <a href="https://nextwaveintelligence.substack.com/p/nwi-001-understanding-the-moral-and" target="_blank">Understanding the moral and social implications of AGI</a>
-                    </li>
-                    <li>
-                        <a href="https://nextwaveintelligence.substack.com/p/nwi-4-how-companies-can-identify" target="_blank">How companies can identify beneficial AI applications and strategically use gen AI</a>
-                    </li>
-                    <li>
-                        <a href="https://nextwaveintelligence.substack.com/p/nwi-2-talent-and-tech-stack-implications" target="_blank">Talent and tech stack implications of adopting applied AI</a>
-                    </li>
-                </ul>
-                
-                <!-- Or link to your blog platform -->
-                <p style="margin-top: 16px;">
-                    <a href="https://nextwaveintelligence.substack.com/" target="_blank"><strong>More on Substack →</strong></a>
-                </p>
-            </section>
-            
-            <!-- ============================================
-                 MEDIA SECTION
-                 ============================================ -->
-            <section id="In the media">
-                <h2>In the media</h2>
-                
-                <!-- List of media interviews -->
-                <ul class="writing-list">
-                    <li><a href="https://pmnewsnigeria.com/2025/03/26/balancing-the-scales-data-informed-vs-data-driven-product-strategy/" target="_blank">Balancing the Scales: Data-Informed vs Data-Driven Product Strategy</a></li>
-                    <li><a href="https://voyageatl.com/interview/rising-stars-meet-olive-nwafor-of-atlanta/" target="_blank">Rising Stars: Meet Olive Nwafor of Atlanta</a></li>
-                    <li><a href="https://tribuneonlineng.com/navigating-product-market-fit-in-emerging-economies/" target="_blank">Navigating Product-Market Fit in Emerging Economies</a></li>
-                </ul>
-            </section>
-            
-            <!-- ============================================
-                 INTERESTS SECTION
-                 ============================================ -->
-            <section id="interests">
-                <h2>Interests</h2>
-                
-                <!-- AI & GPTs interest -->
-                <h3>AI & GPTs</h3>
-                <ul class="interests-list">
-                    <li><a href="https://www.nextwaveintelligence.com" target="_blank" rel="noopener noreferrer" class="link-emphasis">Side projects</a> vibecoded with AI</li>
-                </ul>
-                
-                <!-- Fitness interest -->
-                <h3>Fitness</h3>
-                <ul class="interests-list">
-                    <li>Memberships in my local gym, lagree, pilates and crossfit. I also run occasionally.</li>
-                </ul>
-                
-                <!-- Reads/Podcasts interest -->
-                <h3>Reads & Podcasts</h3>
-                <ul class="interests-list">
-                    <li><a href="https://fs.blog/complexity-bias/" target="_blank">Complexity Bias: Why We Prefer Complicated to Simple.</a></li>
-                    <li><a href="https://www.amazon.com/First-90-Days-Strategies-Expanded/dp/1422188612/ref=sr_1_1?crid=24JTU84UR7ES8&dib=eyJ2IjoiMSJ9.RnYXGX8yJzvYlAYZ9jUjBcFwf0hbB_YGU-2IvxHQUoJDuzKm-du29yMSwFnGR8T2xqnnIRw-xAMQe55XDBYphBeO6DUYWerxbnD6tmwb0Yqh4-_hw9SnhEDNBwvmMQbJagYHZ75llkEDn-mMYNVjvXzrJshVjysR2ldcdmAS8dm2gpCqS_N1yxIAKIBMA4yELbSJ3yNfXdoxq5pOnNEC6zB8o0H46CykJeKMqgu_VKo.rNPmpc7gWE4rOAH-ZROtSgQtS2lBFWTQSg79aSptwBo&dib_tag=se&keywords=the+first+90+days&qid=1768700765&sprefix=%2Caps%2C292&sr=8-1" target="_blank">The First 90 Days: Proven Strategies for Getting Up to Speed Faster and Smarter.</a></li>
-                    <li><a href="https://podcasts.apple.com/us/podcast/how-to-speak-with-confidence-when-youre-put-on-the-spot/id1683948659?i=1000745134740" target="_blank">How to Speak with Confidence When You’re Put on the Spot.</a></li>
-                </ul>
-            </section>
-            
-            <!-- ============================================
-                 HEADSHOT SECTION
-                 ============================================ -->
-            <section id="headshot">
-                <h2>Headshot</h2>
-                
-                <!-- Download link for headshot image -->
-                <a href="headshot.jpg" download class="download-button">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 12v7H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2v9.67z" fill="currentColor"/>
-                    </svg>
-                    <span>download headshot</span>
-                </a>
-            </section>
-        </div>
-    </main>
-    
-    <!-- ============================================
-         FOOTER SECTION - Social links and contact
-         ============================================ -->
-    <footer>
-        <div class="container">
-            <!-- Footer text -->
-            <p class="footer-text">
-                made with ❤️ in atlanta
-            </p>
-            <p class="footer-text" style="margin-top: 8px;">
-                © 2026 Olive Nwafor. All rights reserved.
-            </p>
-        </div>
-    </footer>
-    
-    <!-- ============================================
-         JAVASCRIPT - Minimal interactivity
-         ============================================ -->
-    <script>
-        // Smooth scrolling for anchor links (if you add navigation later)
-        // This makes clicking links scroll smoothly instead of jumping
-        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();  // Prevent default jump behavior
-                
-                // Get the target section
-                const target = document.querySelector(this.getAttribute('href'));
-                
-                if (target) {
-                    // Smoothly scroll to the target section
-                    target.scrollIntoView({
-                        behavior: 'smooth',  // Smooth animation
-                        block: 'start'       // Align to top of viewport
-                    });
-                }
-            });
-        });
-        
-        // Optional: Add intersection observer for scroll animations
-        // This triggers animations when sections come into view
-        
-        const observerOptions = {
-            threshold: 0.1,  // Trigger when 10% of element is visible
-            rootMargin: '0px 0px -50px 0px'  // Trigger slightly before element enters view
-        };
-        
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Add a class when section is visible (for future enhancements)
-                    entry.target.style.opacity = '1';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+    </div>
 </body>
 </html>
