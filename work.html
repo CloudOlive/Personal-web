@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Work experience of Olive Nwafor - Product Manager">
+    <title>Work – Olive Nwafor</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-primary: #0F1115;
+            --bg-secondary: #161A22;
+            --border-color: #232837;
+            --text-primary: #E6EAF0;
+            --text-secondary: #A4ACB9;
+            --text-muted: #7A8293;
+            --accent-primary: #4F7DFF;
+            --accent-hover: #6B92FF;
+            --hover-overlay: rgba(79, 125, 255, 0.08);
+            --card-glow: rgba(79, 125, 255, 0.15);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .top-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .top-nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 24px;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .top-nav .logo:hover { color: var(--accent-hover); }
+
+        .top-nav .nav-items {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .top-nav .nav-items a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .top-nav .nav-items a:hover,
+        .top-nav .nav-items a.active { color: var(--text-primary); }
+
+        .social-icons {
+            display: flex;
+            gap: 16px;
+            margin-left: 16px;
+        }
+
+        .social-icons a {
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+            display: flex;
+        }
+
+        .social-icons a:hover { color: var(--text-primary); }
+        .social-icons svg { width: 16px; height: 16px; }
+
+        .page-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 48px;
+            color: var(--text-primary);
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        /* Experience items */
+        .experience-item {
+            margin-bottom: 36px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .experience-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .experience-date {
+            font-size: 13px;
+            color: var(--accent-primary);
+            font-weight: 400;
+            margin-left: 16px;
+            white-space: nowrap;
+        }
+
+        .company {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .experience-description {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .resume-link {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 14px;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: color 0.3s ease;
+        }
+
+        .resume-link:hover {
+            color: var(--accent-hover);
+        }
+
+        /* Section divider */
+        .section-divider {
+            margin: 48px 0;
+            border: none;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 32px;
+            color: var(--text-primary);
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        /* Project cards */
+        .project-card {
+            padding: 24px;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            margin-bottom: 20px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--card-glow);
+            border-color: var(--accent-primary);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .project-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .project-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .project-title a:hover { color: var(--accent-hover); }
+
+        .project-year {
+            font-size: 13px;
+            color: var(--accent-primary);
+            margin-left: 16px;
+        }
+
+        .project-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: var(--hover-overlay);
+            color: var(--accent-primary);
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .site-footer .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 20px;
+            color: var(--text-muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .site-footer p {
+            font-size: 12px;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .top-nav {
+                flex-direction: column;
+                gap: 16px;
+                padding: 20px 24px;
+            }
+            .top-nav .nav-items {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .social-icons { margin-left: 0; }
+            .page-title { font-size: 36px; }
+            .page-content { padding: 60px 24px 80px; }
+        }
+
+        @media (max-width: 480px) {
+            .top-nav .nav-items { gap: 16px; }
+            .page-title { font-size: 30px; }
+            .experience-header { flex-direction: column; }
+            .experience-date { margin-left: 0; margin-top: 4px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="logo">Olive Nwafor</a>
+        <div class="nav-items">
+            <a href="about.html">About</a>
+            <a href="work.html" class="active">Work</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/olivenwafor" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://github.com/CloudOlive" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <h1 class="page-title">work</h1>
+
+        <!-- Experience -->
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="job-title">Product Manager, Data/AI</div>
+                <span class="experience-date">2025 – Present</span>
+            </div>
+            <div class="company">BlackRock Inc.</div>
+            <p class="experience-description">
+                Drove enterprise AI agent strategy, delivery and global adoption across business units, through scalable platforms, governance frameworks, and strategic build decisions that democratized org-wide AI access.
+            </p>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="job-title">Product Manager</div>
+                <span class="experience-date">2023 – 2024</span>
+            </div>
+            <div class="company">Southwire Company LLC.</div>
+            <p class="experience-description">
+                Owned product strategy, technical execution, and go-to-market delivery for a global solutions product line, using customer insights and performance metrics to drive scalable releases and continuous improvement.
+            </p>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="job-title">Product Manager</div>
+                <span class="experience-date">2023</span>
+            </div>
+            <div class="company">PrimeRevenue Inc.</div>
+            <p class="experience-description">
+                Launched financial reporting features that improved compliance, usability, and cross-company communication. Led product enablement and delivery initiatives and deployed data-driven product guides.
+            </p>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="job-title">Product Manager</div>
+                <span class="experience-date">2019 – 2022</span>
+            </div>
+            <div class="company">Hewlett Packard Enterprise</div>
+            <p class="experience-description">
+                Coordinated product development and stakeholder alignment for HPE's SaaS configuration platform, improving user satisfaction, streamlining workflows, and enabling faster, efficient partner and engineer experiences.
+            </p>
+        </div>
+
+        <p><a href="oliveresume.pdf" target="_blank" class="resume-link">Full resume →</a></p>
+
+        <hr class="section-divider">
+
+        <!-- Projects -->
+        <h2 class="section-subtitle">projects</h2>
+
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">
+                    <a href="https://www.tipright.org" target="_blank" rel="noopener noreferrer">TippyAI</a>
+                </div>
+                <span class="project-year">2025</span>
+            </div>
+            <p class="project-description">
+                Fast splits, named shares, and cash tip helpers for small groups. Built with React.
+            </p>
+            <div class="project-tags">
+                <span class="project-tag">Mobile</span>
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">JSON</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">
+                    <a href="https://www.eatatl.xyz" target="_blank" rel="noopener noreferrer">EatATL</a>
+                </div>
+                <span class="project-year">2023</span>
+            </div>
+            <p class="project-description">
+                Guide to some of the best Atlanta restaurants categorized by cuisine. Built with JavaScript.
+            </p>
+            <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Food & Restaurants</span>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <a href="index.html" class="footer-logo">Olive Nwafor</a>
+        <p>&copy; 2026 Olive Nwafor. All rights reserved.</p>
+    </footer>
+</body>
+</html>
